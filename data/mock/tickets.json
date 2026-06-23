@@ -1,0 +1,124 @@
+{
+  "incidents": [
+    {
+      "sys_id": "mock_001",
+      "number": "INC0010001",
+      "short_description": "Production database not responding - payment service down",
+      "description": "Our payment processing service is unable to connect to the Oracle database. Customers are receiving 500 errors on checkout. Error in logs: ORA-12541: TNS: no listener. Started approximately 08:42 AM EST. Affecting all customers in the US region.",
+      "opened_at": "2026-06-22 08:45:00",
+      "priority": "1",
+      "category": "",
+      "cmdb_ci": {"display_value": "payment-service", "sys_id": "ci_payment"},
+      "caller_id": {"display_value": "John Smith"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_002",
+      "number": "INC0010002",
+      "short_description": "User authentication failing - LDAP timeout errors",
+      "description": "Multiple users reporting they cannot log into the corporate portal. Authentication service is logging LDAP connection timeout errors every 30 seconds. Approximately 150 users affected based on helpdesk call volume. Error: javax.naming.CommunicationException: LDAP server unreachable.",
+      "opened_at": "2026-06-22 09:12:00",
+      "priority": "2",
+      "category": "",
+      "cmdb_ci": {"display_value": "auth-service", "sys_id": "ci_auth"},
+      "caller_id": {"display_value": "Maria Garcia"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_003",
+      "number": "INC0010003",
+      "short_description": "Slow page load times on customer portal - 8-12 second delays",
+      "description": "The customer-facing portal is loading significantly slower than normal. Pages that normally load in under 2 seconds are now taking 8-12 seconds. Dynatrace showing increased response times starting at 10:30 AM. No errors, just latency. Affects all browser types. About 400 active users.",
+      "opened_at": "2026-06-22 10:45:00",
+      "priority": "2",
+      "category": "",
+      "cmdb_ci": {"display_value": "customer-portal", "sys_id": "ci_portal"},
+      "caller_id": {"display_value": "Robert Johnson"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_004",
+      "number": "INC0010004",
+      "short_description": "Nightly ETL job failed - data pipeline error",
+      "description": "The nightly ETL batch job that runs at 2 AM failed to complete. Error in logs: Connection pool exhausted after 300 seconds. Database queries running fine manually. Job has been working for 6 months, failed for the first time last night. Data warehouse may have stale data from yesterday.",
+      "opened_at": "2026-06-22 06:30:00",
+      "priority": "3",
+      "category": "",
+      "cmdb_ci": {"display_value": "etl-pipeline", "sys_id": "ci_etl"},
+      "caller_id": {"display_value": "Sarah Chen"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_005",
+      "number": "INC0010005",
+      "short_description": "API rate limit errors from third-party integration",
+      "description": "Our integration with the shipping provider API is returning 429 Too Many Requests errors. Started hitting the rate limit around 2pm. We are currently processing 1200 requests/minute, the limit is 1000/min. Non-critical orders are being queued but there's a backlog building. Need to implement request throttling.",
+      "opened_at": "2026-06-22 14:20:00",
+      "priority": "3",
+      "category": "",
+      "cmdb_ci": {"display_value": "shipping-integration", "sys_id": "ci_shipping"},
+      "caller_id": {"display_value": "Alex Thompson"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_006",
+      "number": "INC0010006",
+      "short_description": "Report generation taking too long - finance dashboard timeout",
+      "description": "Finance team reports that the monthly revenue report is timing out after 30 minutes. The same report ran in 4 minutes last month. No schema changes. Database has grown significantly - table now has 50M rows vs 12M last month. Query is doing a full table scan.",
+      "opened_at": "2026-06-22 11:00:00",
+      "priority": "3",
+      "category": "",
+      "cmdb_ci": {"display_value": "reporting-service", "sys_id": "ci_reporting"},
+      "caller_id": {"display_value": "Lisa Wang"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_007",
+      "number": "INC0010007",
+      "short_description": "SSL certificate expiring in 3 days - renewal needed",
+      "description": "The SSL certificate for api.internal.company.com expires on June 25, 2026. Automated renewal failed last week (ACME challenge failed). If not renewed, all API calls will start failing. This affects the mobile app and external partner integrations.",
+      "opened_at": "2026-06-22 09:00:00",
+      "priority": "2",
+      "category": "",
+      "cmdb_ci": {"display_value": "api-gateway", "sys_id": "ci_gateway"},
+      "caller_id": {"display_value": "DevOps Team"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_008",
+      "number": "INC0010008",
+      "short_description": "Single user cannot open attachments in ticketing system",
+      "description": "User jdoe@company.com reports that clicking on attachments in the ticketing system gives a 403 Forbidden error. Other users can open the same attachments. Tried different browsers and computers. Issue started after password reset yesterday. User can still access all other features.",
+      "opened_at": "2026-06-22 13:45:00",
+      "priority": "4",
+      "category": "",
+      "cmdb_ci": {"display_value": "itsm-platform", "sys_id": "ci_itsm"},
+      "caller_id": {"display_value": "Jane Doe"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_009",
+      "number": "INC0010009",
+      "short_description": "Memory leak in order-processing service - OOM restarts every 4 hours",
+      "description": "The order-processing service is restarting every 3-4 hours due to OutOfMemoryError. Heap dumps show memory growing steadily from 2GB to 8GB before OOM. Issue started after last Tuesday's deployment (v2.4.1). Rolling restarts are masking the issue but causing brief disruptions. Needs root cause fix.",
+      "opened_at": "2026-06-22 07:15:00",
+      "priority": "2",
+      "category": "",
+      "cmdb_ci": {"display_value": "order-processing", "sys_id": "ci_orders"},
+      "caller_id": {"display_value": "Platform Team"},
+      "state": "1"
+    },
+    {
+      "sys_id": "mock_010",
+      "number": "INC0010010",
+      "short_description": "Disk usage at 94% on prod-db-01 - alert threshold exceeded",
+      "description": "Disk usage on production database server prod-db-01 has reached 94%. Alert threshold is 90%. If it reaches 100%, the database will stop accepting writes. Main growth is in /var/lib/postgresql/data/pg_wal - WAL logs are not being cleaned up properly. Autovacuum may be disabled.",
+      "opened_at": "2026-06-22 15:00:00",
+      "priority": "2",
+      "category": "",
+      "cmdb_ci": {"display_value": "prod-db-01", "sys_id": "ci_db01"},
+      "caller_id": {"display_value": "Monitoring System"},
+      "state": "1"
+    }
+  ]
+}

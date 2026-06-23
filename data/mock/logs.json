@@ -1,0 +1,48 @@
+{
+  "dynatrace_problems": [
+    {
+      "problemId": "P-20260622-001",
+      "displayId": "P-001",
+      "title": "Database connection pool exhausted on payment-service",
+      "severityLevel": "AVAILABILITY",
+      "status": "OPEN",
+      "startTime": 1750593900000,
+      "affectedEntities": [{"name": "payment-service", "type": "SERVICE"}],
+      "impactedEntities": [{"name": "payment-service", "type": "SERVICE"}],
+      "rootCauseEntity": {"name": "oracle-prod-01", "type": "HOST"},
+      "problemDetails": "Connection pool exhausted. Max connections: 100, Active: 100, Waiting: 847"
+    }
+  ],
+  "splunk_logs": [
+    {
+      "_time": "2026-06-22 08:41:23",
+      "_raw": "ERROR [payment-service] ORA-12541: TNS: no listener at oracle-prod-01:1521. Retry attempt 1/3",
+      "source": "payment-service.log",
+      "severity": "ERROR"
+    },
+    {
+      "_time": "2026-06-22 08:41:25",
+      "_raw": "ERROR [payment-service] ORA-12541: TNS: no listener at oracle-prod-01:1521. Retry attempt 2/3",
+      "source": "payment-service.log",
+      "severity": "ERROR"
+    },
+    {
+      "_time": "2026-06-22 08:41:27",
+      "_raw": "FATAL [payment-service] Unable to establish database connection after 3 retries. Marking service unhealthy.",
+      "source": "payment-service.log",
+      "severity": "FATAL"
+    },
+    {
+      "_time": "2026-06-22 08:41:28",
+      "_raw": "ERROR [payment-service] Health check failed. Circuit breaker OPEN. Upstream: oracle-prod-01",
+      "source": "payment-service.log",
+      "severity": "ERROR"
+    },
+    {
+      "_time": "2026-06-22 08:42:01",
+      "_raw": "ERROR [api-gateway] Downstream service payment-service returned 503. Returning 500 to client.",
+      "source": "api-gateway.log",
+      "severity": "ERROR"
+    }
+  ]
+}

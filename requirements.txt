@@ -1,0 +1,28 @@
+# Core AI
+anthropic>=0.30.0
+
+# HTTP
+requests>=2.31.0
+
+# Web framework (webhook server)
+flask>=3.0.0
+
+# Async HTTP (parallel log gathering)
+aiohttp>=3.9.0
+
+# Scheduler
+apscheduler>=3.10.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=4.1.0
+responses>=0.25.0
+
+# CLI dashboard
+rich>=13.0.0
+
+# Data
+tabulate>=0.9.0

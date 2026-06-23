@@ -1,0 +1,50 @@
+[
+  {
+    "service": "payment-service-prod",
+    "timestamp": "2025-06-10T14:30:01Z",
+    "level": "ERROR",
+    "message": "java.lang.OutOfMemoryError: Java heap space",
+    "thread": "pool-1-thread-42",
+    "class": "com.company.payment.ProcessorService"
+  },
+  {
+    "service": "payment-service-prod",
+    "timestamp": "2025-06-10T14:30:02Z",
+    "level": "ERROR",
+    "message": "GC overhead limit exceeded \u2014 heap at 97%",
+    "thread": "GC-thread-1",
+    "class": "java.lang.Runtime"
+  },
+  {
+    "service": "payment-service-prod",
+    "timestamp": "2025-06-10T14:30:03Z",
+    "level": "FATAL",
+    "message": "Application shutting down due to memory error",
+    "thread": "main",
+    "class": "com.company.payment.Application"
+  },
+  {
+    "service": "auth-service-prod",
+    "timestamp": "2025-06-10T09:14:55Z",
+    "level": "ERROR",
+    "message": "java.lang.NullPointerException at AuthService.validateToken(AuthService.java:142)",
+    "thread": "http-nio-8080-exec-7",
+    "class": "com.company.auth.AuthService"
+  },
+  {
+    "service": "auth-service-prod",
+    "timestamp": "2025-06-10T09:15:00Z",
+    "level": "ERROR",
+    "message": "Token validation failed: token object is null",
+    "thread": "http-nio-8080-exec-8",
+    "class": "com.company.auth.TokenValidator"
+  },
+  {
+    "service": "prod-oracle-db-01",
+    "timestamp": "2025-06-10T14:32:05Z",
+    "level": "ERROR",
+    "message": "ORA-12541: TNS:no listener",
+    "thread": "connection-pool-1",
+    "class": "oracle.jdbc.driver.OracleDriver"
+  }
+]
