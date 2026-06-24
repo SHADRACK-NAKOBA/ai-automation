@@ -44,6 +44,11 @@ PII_RULES = [
     (r'(?i)(api[_\-]?key|token|secret|auth)\s*[=:"\s]+\S+', r'\1=[REDACTED]'),
     # Phone numbers (US format)
     (r'\b(?:\+1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b', '[PHONE]'),
+    # AWS Access Keys
+    (r'\bAKIA[0-9A-Z]{16}\b', '[AWS_KEY]'),
+    # Anthropic and OpenAI API keys
+    (r'\bsk-ant-[A-Za-z0-9\-_]{20,}\b', '[AI_API_KEY]'),
+    (r'\bsk-[A-Za-z0-9]{32,}\b', '[AI_API_KEY]'),
     # Account/customer IDs that look numeric (8+ digits)
     # NOTE: Comment this out if your ticket numbers are numeric
     # (r'\b\d{8,}\b', '[ACCOUNT_ID]'),

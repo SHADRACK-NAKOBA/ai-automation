@@ -8,15 +8,15 @@ Eliminates manual triage, log analysis, and repetitive support tasks using AI ag
 
 ## What This Does
 
-| Agent | What It Automates | Time Saved/Run |
-|-------|-------------------|----------------|
-| Ticket Classifier | Auto-categorizes and prioritizes incoming tickets | ~4 min |
-| Log Harvester | Pulls and summarizes logs when incidents fire | ~18 min |
-| SQL Query Bot | Answers data questions in plain English via Slack | ~12 min |
-| Self-Healing Agent | Executes pre-approved fix scripts on known failures | ~25 min |
-| RCA Generator | Drafts post-incident reviews from ticket history | ~40 min |
-| Incident Brief | Delivers 90-second war-room context on P1s | ~22 min |
-| Runbook Converter | Converts manual runbooks → automated workflows | ~60 min |
+| Agent | What It Automates | Time Saved/Run | Status |
+|-------|-------------------|----------------|--------|
+| Ticket Classifier | Auto-categorizes and prioritizes incoming tickets | ~4 min | ✅ Built |
+| Log Harvester | Pulls and summarizes logs when incidents fire | ~18 min | 🔧 In Progress |
+| SQL Query Bot | Answers data questions in plain English via Slack | ~12 min | 📋 Planned |
+| Self-Healing Agent | Executes pre-approved fix scripts on known failures | ~25 min | 📋 Planned |
+| RCA Generator | Drafts post-incident reviews from ticket history | ~40 min | 📋 Planned |
+| Incident Brief | Delivers 90-second war-room context on P1s | ~22 min | 📋 Planned |
+| Runbook Converter | Converts manual runbooks → automated workflows | ~60 min | 📋 Planned |
 
 ---
 
