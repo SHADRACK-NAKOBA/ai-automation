@@ -194,3 +194,24 @@ class ServiceNowClient:
         except Exception as e:
             logger.error(f"❌ ServiceNow connection error: {e}")
             return False
+
+    def get_incidents(self, query: str = "", limit: int = 50) -> list:
+        """Fetch multiple incidents matching a query string."""
+        if self.use_synthetic:
+            return self._load_synthetic_tickets()
+        params = {"sysparm_limit": limit, "sysparm_display_value": "true"}
+        if query:
+            params["sysparm_query"] = query
+        try:
+            resp = self.session.get(
+                f"{self.base}/api/now/table/incident",
+                params=params,
+                timeout=30,
+            )
+            resp.raise_for_status()
+            tickets = resp.json().get("result", [])
+            logger.info(f"get_incidents: fetched {len(tickets)} tickets")
+            return tickets
+        except requests.RequestException as e:
+            logger.error(f"get_incidents failed: {e}")
+            return []
