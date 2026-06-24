@@ -37,6 +37,12 @@ def get_config() -> dict:
         "anthropic_key": os.environ["ANTHROPIC_API_KEY"],
         "ai_model": os.environ.get("AI_MODEL", "claude-sonnet-4-6"),
         "ai_max_tokens": int(os.environ.get("AI_MAX_TOKENS", "1000")),
+        # Email settings
+        "email_sender":    os.environ.get("EMAIL_SENDER", ""),
+        "email_password":  os.environ.get("EMAIL_PASSWORD", ""),
+        "email_recipient": os.environ.get("EMAIL_RECIPIENT", ""),
+        "email_smtp_host": os.environ.get("EMAIL_SMTP_HOST", "smtp.gmail.com"),
+        "email_smtp_port": int(os.environ.get("EMAIL_SMTP_PORT", "587")),
 
         # ServiceNow
         "snow_base": os.environ["SNOW_BASE_URL"].rstrip("/"),
