@@ -37,6 +37,10 @@ def get_config() -> dict:
         "anthropic_key": os.environ["ANTHROPIC_API_KEY"],
         "ai_model": os.environ.get("AI_MODEL", "claude-sonnet-4-6"),
         "ai_max_tokens": int(os.environ.get("AI_MAX_TOKENS", "1000")),
+        "dt_base":      os.environ.get("DT_BASE", ""),
+        "dt_token":     os.environ.get("DT_TOKEN", ""),
+        "splunk_base":  os.environ.get("SPLUNK_BASE", ""),
+        "splunk_token": os.environ.get("SPLUNK_TOKEN", ""),
         # Email settings
         "email_sender":    os.environ.get("EMAIL_SENDER", ""),
         "email_password":  os.environ.get("EMAIL_PASSWORD", ""),
