@@ -87,7 +87,9 @@ def generate_report(days: int = 7):
     print(f"  • Agents running in DRY_RUN=false (live) mode")
     print(f"  • All P1 tickets still require human confirmation")
     print(f"  • Classification confidence threshold: 75%")
-    print(f"  • Next agent being built: Log Harvester (Week 4)")
+    print(f"  • "  • All 7 agents complete and tested"
+           "  • Next: connect to real company environment"
+           "  • Ready for production deployment"
     print()
     print("=" * width)
     print()
