@@ -32,8 +32,6 @@ A Personal Developer Instance is your practice ServiceNow. 100% free. No credit 
 13. Click **"Open Instance"** to verify it loads
 
 **WHY you need a PDI:**
-Your manager said "you'll get meetings first, then I'll let you automate things."
-This means you won't have access to their real ServiceNow for weeks.
 Your PDI is identical in structure to production. You build and test everything
 here so that when you finally get real access, you're not learning on their data.
 
